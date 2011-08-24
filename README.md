@@ -1,13 +1,14 @@
-Rails 3.1 generic nested forms
-===============================
+Simple parent-child forms in Rails 3.1
+=======================================
 
-This is an attempt to make the simplest possible Rails 3.1 scaffold for nested
-forms (i.e. a parent-child relationship between two data sets). We aim to
+This is an attempt to make the simplest possible Rails 3.1 template for nested
+forms (i.e. a parent-child relationship between two tables). We aim to
 support CRUD actions for both parent and child. You can either download the
-scaffold as a template for your project or follow the instructions below to
-create your own objects.
+template for your project or follow the instructions below to create your own
+objects.
 
-The HTML & CSS are based on Russ Frisch's HTML5 Boilerplate template https://github.com/russfrisch/h5bp-rails
+The HTML & CSS are based on Russ Frisch's HTML5 Boilerplate template
+https://github.com/russfrisch/h5bp-rails
 
 The minimum configuration and coding has been done to make this work. Please let
 me have any suggestions for improvements - I'm not a Rails or Ruby expert.
@@ -19,7 +20,8 @@ Getting Started
 
 1. At the command prompt, create a new Rails application:
 `rails new myapp -m https://github.com/russfrisch/h5bp-rails/raw/master/h5bp.rb`
-(where `myapp` is the application name)
+(where `myapp` is the application name). If you don't want the HTML5 goodness
+then just `rails new myapp`.
 
 2. `cd myapp`
 
