@@ -15,11 +15,20 @@ me have any suggestions for improvements - I'm not a Rails or Ruby expert.
 
 -- Dominic Sayers
 
-Getting Started
-================
+Downloading the template app
+=============================
+
+1.  `git clone git://github.com/moo-li/Simple-parent-child-forms-in-Rails-3.1.git myapp`
+     (where `myapp` is your application name).
+
+
+Creating your own simple app
+=============================
+
+Here's the exact steps I performed to create this app:
 
 1.  At the command prompt, create a new Rails application:
-    `rails new myapp` (where `myapp` is the application name). If you want HTML5
+    `rails new myapp` (where `myapp` is your application name). If you want HTML5
     goodness then `rails new myapp -m https://github.com/russfrisch/h5bp-rails/raw/master/h5bp.rb`.
 
 1.  `cd myapp`
