@@ -61,31 +61,31 @@ Getting Started
 1.  Add the following lines to `app/views/moms/show.html.erb` before the line
     containing `<%= link_to 'Edit', edit_mom_path(@mom) %> |`
 
-        &lt;h2>Kids&lt;/h2>
-        &lt;%= render :partial => "kids/kid", :collection => @mom.kids %>
+        <h2>Kids</h2>
+        <%= render :partial => "kids/kid", :collection => @mom.kids %>
 
-        &lt;h3>Add kid&lt;/h3>
-        &lt;%= render 'kids/form' %>
+        <h3>Add kid</h3>
+        <%= render 'kids/form' %>
 
 1.  Create a file `app/views/kids/_kid.html.erb` with the following code:
 
-        &lt;p>
-          &lt;strong>Kid:&lt;/strong>
-          &lt;%= kid.name %>
-          &lt;%= link_to 'Remove', [kid.mom, kid], :confirm => 'Really remove kid?', :method => :delete %>
-        &lt;/p>
+        <p>
+          <strong>Kid:</strong>
+          <%= kid.name %>
+          <%= link_to 'Remove', [kid.mom, kid], :confirm => 'Really remove kid?', :method => :delete %>
+        </p>
 
 1. Create a file `app/views/kids/_form.html.erb` with the following code:
 
-        &lt;%= form_for([@mom, @mom.kids.build]) do |f| %>
-          &lt;div class="field">
-            &lt;%= f.label :name %> &lt;%= f.text_field :name %>
-          &lt;/div>
+        <%= form_for([@mom, @mom.kids.build]) do |f| %>
+          <div class="field">
+            <%= f.label :name %> <%= f.text_field :name %>
+          </div>
 
-          &lt;div class="actions">
-            &lt;%= f.submit %>
-          &lt;/div>
-        &lt;% end %>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+        <% end %>
 
 1. `rails s`
 
