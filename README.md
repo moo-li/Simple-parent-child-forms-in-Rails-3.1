@@ -18,30 +18,30 @@ me have any suggestions for improvements - I'm not a Rails or Ruby expert.
 Getting Started
 ================
 
-1. At the command prompt, create a new Rails application:
-`rails new myapp` (where `myapp` is the application name). If you want HTML5
-goodness then `rails new myapp -m https://github.com/russfrisch/h5bp-rails/raw/master/h5bp.rb`.
+1.  At the command prompt, create a new Rails application:
+    `rails new myapp` (where `myapp` is the application name). If you want HTML5
+    goodness then `rails new myapp -m https://github.com/russfrisch/h5bp-rails/raw/master/h5bp.rb`.
 
-2. `cd myapp`
+1.  `cd myapp`
 
-3. `rails g scaffold Mom name:string`
+1.  `rails g scaffold Mom name:string`
 
-4. `rails g model Kid name:string mom:references`
+1.  `rails g model Kid name:string mom:references`
 
-5. Add the following lines to `app/models/mom.rb`<pre>
+1.  Add the following lines to `app/models/mom.rb`
 
-  has_many :kids, :dependent => :destroy
-  accepts_nested_attributes_for :kids, :allow_destroy => :true</pre>
+        has_many :kids, :dependent => :destroy
+        accepts_nested_attributes_for :kids, :allow_destroy => :true</pre>
 
-6. `rake db:migrate`
+1.  `rake db:migrate`
 
-7. In `config/routes.rb`, change `resources :moms` to
+1.  In `config/routes.rb`, change `resources :moms` to
 
-<pre>  resources :moms do
-    resources :kids
-  end</pre>
+        resources :moms do
+          resources :kids
+        end
   
-8. `rails g controller Kids`
+1.  `rails g controller Kids`
 
 9. Add the following methods to `app/controllers/kids_controller.rb`
 
