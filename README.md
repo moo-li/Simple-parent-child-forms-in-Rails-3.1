@@ -43,50 +43,50 @@ Getting Started
   
 1.  `rails g controller Kids`
 
-9. Add the following methods to `app/controllers/kids_controller.rb`
+1.  Add the following methods to `app/controllers/kids_controller.rb`
 
-<pre>  def create
-    @mom = Mom.find(params[:mom_id])
-    @kid = @mom.kids.create(params[:kid])
-    redirect_to mom_path(@mom)
-  end
+        def create
+          @mom = Mom.find(params[:mom_id])
+          @kid = @mom.kids.create(params[:kid])
+          redirect_to mom_path(@mom)
+        end
 
-  def destroy
-    @mom = Mom.find(params[:mom_id])
-    @kid = @mom.kids.find(params[:id])
-    @kid.destroy
-    redirect_to mom_path(@mom)
-  end</pre>
+        def destroy
+          @mom = Mom.find(params[:mom_id])
+          @kid = @mom.kids.find(params[:id])
+          @kid.destroy
+          redirect_to mom_path(@mom)
+        end</pre>
 
-10. Add the following lines to `app/views/moms/show.html.erb` before the line
-containing `<%= link_to 'Edit', edit_mom_path(@mom) %> |`
+1.  Add the following lines to `app/views/moms/show.html.erb` before the line
+    containing `<%= link_to 'Edit', edit_mom_path(@mom) %> |`
 
-<pre>&lt;h2>Kids&lt;/h2>
-&lt;%= render :partial => "kids/kid", :collection => @mom.kids %>
+        &lt;h2>Kids&lt;/h2>
+        &lt;%= render :partial => "kids/kid", :collection => @mom.kids %>
 
-&lt;h3>Add kid&lt;/h3>
-&lt;%= render 'kids/form' %></pre>
+        &lt;h3>Add kid&lt;/h3>
+        &lt;%= render 'kids/form' %>
 
-11. Create a file `app/views/kids/_kid.html.erb` with the following code:
+1.  Create a file `app/views/kids/_kid.html.erb` with the following code:
 
-<pre>&lt;p>
-  &lt;strong>Kid:&lt;/strong>
-  &lt;%= kid.name %>
-  &lt;%= link_to 'Remove', [kid.mom, kid], :confirm => 'Really remove kid?', :method => :delete %>
-&lt;/p></pre>
+        &lt;p>
+          &lt;strong>Kid:&lt;/strong>
+          &lt;%= kid.name %>
+          &lt;%= link_to 'Remove', [kid.mom, kid], :confirm => 'Really remove kid?', :method => :delete %>
+        &lt;/p>
 
-12. Create a file `app/views/kids/_form.html.erb` with the following code:
+1. Create a file `app/views/kids/_form.html.erb` with the following code:
 
-<pre>&lt;%= form_for([@mom, @mom.kids.build]) do |f| %>
-  &lt;div class="field">
-    &lt;%= f.label :name %> &lt;%= f.text_field :name %>
-  &lt;/div>
+        &lt;%= form_for([@mom, @mom.kids.build]) do |f| %>
+          &lt;div class="field">
+            &lt;%= f.label :name %> &lt;%= f.text_field :name %>
+          &lt;/div>
 
-  &lt;div class="actions">
-    &lt;%= f.submit %>
-  &lt;/div>
-&lt;% end %></pre>
+          &lt;div class="actions">
+            &lt;%= f.submit %>
+          &lt;/div>
+        &lt;% end %>
 
-13. `rails s`
+1. `rails s`
 
-14. Point your browser to `http://localhost:3000/moms`.
+1. Point your browser to `http://localhost:3000/moms`.
