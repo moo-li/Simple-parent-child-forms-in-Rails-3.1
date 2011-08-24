@@ -7,8 +7,8 @@ support CRUD actions for both parent and child. You can either download the
 template for your project or follow the instructions below to create your own
 objects.
 
-The HTML & CSS are based on Russ Frisch's HTML5 Boilerplate template
-https://github.com/russfrisch/h5bp-rails
+We will create Mom and Kid objects. You can create, update and destroy Moms and
+Kids. Kids each have one Mom but Moms can have many Kids.
 
 The minimum configuration and coding has been done to make this work. Please let
 me have any suggestions for improvements - I'm not a Rails or Ruby expert.
@@ -19,9 +19,8 @@ Getting Started
 ================
 
 1. At the command prompt, create a new Rails application:
-`rails new myapp -m https://github.com/russfrisch/h5bp-rails/raw/master/h5bp.rb`
-(where `myapp` is the application name). If you don't want the HTML5 goodness
-then just `rails new myapp`.
+`rails new myapp` (where `myapp` is the application name). If you want HTML5
+goodness then `rails new myapp -m https://github.com/russfrisch/h5bp-rails/raw/master/h5bp.rb`.
 
 2. `cd myapp`
 
