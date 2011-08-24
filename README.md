@@ -31,7 +31,7 @@ Getting Started
 1.  Add the following lines to `app/models/mom.rb`
 
         has_many :kids, :dependent => :destroy
-        accepts_nested_attributes_for :kids, :allow_destroy => :true</pre>
+        accepts_nested_attributes_for :kids, :allow_destroy => :true
 
 1.  `rake db:migrate`
 
@@ -56,7 +56,7 @@ Getting Started
           @kid = @mom.kids.find(params[:id])
           @kid.destroy
           redirect_to mom_path(@mom)
-        end</pre>
+        end
 
 1.  Add the following lines to `app/views/moms/show.html.erb` before the line
     containing `<%= link_to 'Edit', edit_mom_path(@mom) %> |`
