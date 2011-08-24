@@ -28,9 +28,9 @@ goodness then `rails new myapp -m https://github.com/russfrisch/h5bp-rails/raw/m
 
 4. `rails g model Kid name:string mom:references`
 
-5. Add the following lines to `app/models/mom.rb`
+5. Add the following lines to `app/models/mom.rb`<pre>
 
-<pre>  has_many :kids, :dependent => :destroy
+  has_many :kids, :dependent => :destroy
   accepts_nested_attributes_for :kids, :allow_destroy => :true</pre>
 
 6. `rake db:migrate`
