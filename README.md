@@ -19,7 +19,15 @@ Downloading the template app
 =============================
 
 1.  `git clone git://github.com/moo-li/Simple-parent-child-forms-in-Rails-3.1.git myapp`
-     (where `myapp` is your application name).
+    (where `myapp` is your application name).
+
+1.  `cd myapp`	
+
+1.  `bundle update`
+
+1.  `rails s`
+
+1. Point your browser to `http://localhost:3000/moms`.
 
 
 Creating your own simple app
