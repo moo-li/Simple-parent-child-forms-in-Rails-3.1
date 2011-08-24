@@ -1,0 +1,9 @@
+<%= form_for([@mom, @mom.kids.build]) do |f| %>
+  <div class="field">
+    <%= f.label :name %> <%= f.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,23 @@
+<h1>Listing moms</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @moms.each do |mom| %>
+  <tr>
+    <td><%= mom.name %></td>
+    <td><%= link_to 'Show', mom %></td>
+    <td><%= link_to 'Edit', edit_mom_path(mom) %></td>
+    <td><%= link_to 'Destroy', mom, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Mom', new_mom_path %>

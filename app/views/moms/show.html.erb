@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @mom.name %>
+</p>
+
+<h2>Kids</h2>
+<%= render :partial => "kids/kid", :collection => @mom.kids %>
+
+<h3>Add kid</h3>
+<%= render 'kids/form' %>
+
+<%= link_to 'Edit', edit_mom_path(@mom) %> |
+<%= link_to 'Back', moms_path %>
