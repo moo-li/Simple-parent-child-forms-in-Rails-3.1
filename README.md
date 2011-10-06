@@ -79,7 +79,7 @@ Here's the exact steps I performed to create this app:
     containing `<%= link_to 'Edit', edit_mom_path(@mom) %> |`
 
         <h2>Kids</h2>
-        <%= render :partial => "kids/kid", :collection => @mom.kids %>
+        <%= render @mom.kids %>
 
         <h3>Add kid</h3>
         <%= render 'kids/form' %>
